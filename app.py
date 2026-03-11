@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import io
 from adyen_batches import create_excel_with_formulas
 
 mapping_data = [
@@ -46,4 +45,5 @@ if uploaded_file is not None:
             data=excel_file,
             file_name=f"{uploaded_file.name.split(".")[0]}.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
         )
