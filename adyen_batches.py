@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 
 def add_pivot_with_mapping(writer, df, mapping_df):
     pd.set_option('future.no_silent_downcasting', True)
@@ -191,4 +190,5 @@ def create_excel_with_formulas(filename, df, mapping_df):
         add_pivot_with_mapping(writer, df, mapping_df)
 
     output.seek(0)
+
     return output
